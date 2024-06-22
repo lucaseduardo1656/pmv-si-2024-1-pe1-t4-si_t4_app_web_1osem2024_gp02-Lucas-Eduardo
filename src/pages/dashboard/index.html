@@ -58,14 +58,9 @@
       </div>
       <div class="card mt-24">
         <h2 class="card-title">Entradas e Saídas</h2>
-        <div class="flex flex-col gap-8">
-          <div class="flex gap-8 items-center">
-            <span class="text light sm right hor-chart-desc">Entradas</span>
-            <div class="bg-green hor-chart-bar incomings-chart-bar"></div>
-          </div>
-          <div class="flex-1 gap-8 items-center">
-            <span class="text light sm right hor-chart-desc">Saídas</span>
-            <div class="bg-primary hor-chart-bar expenses-chart-bar"></div>
+        <div class="flex">
+          <div class="chart-container">
+            <canvas id="entry-charts" class="charts"> </canvas>
           </div>
         </div>
       </div>
@@ -73,128 +68,8 @@
       <div class="card mt-24">
         <h2 class="card-title">Por dia</h2>
         <div class="overflow-x">
-          <div class="flex relative chart-container">
-            <div class="zero-line-chart"></div>
-            <div class="flex flex-col shrink-1">
-              <div class="chart-space">
-                <span class="absolute chart-value" style="top: 20px"
-                  >120,00</span
-                >
-                <div
-                  class="vert-chart-bar absolute bg-green"
-                  style="height: 80px; top: 45px"
-                ></div>
-              </div>
-              <span class="hor-chart-desc text center">01/dez</span>
-            </div>
-            <div class="flex flex-col shrink-1">
-              <div class="chart-space">
-                <span class="absolute chart-value" style="top: 190px"
-                  >80,00</span
-                >
-                <div
-                  class="vert-chart-bar absolute bg-primary"
-                  style="height: 60px; top: 125px"
-                ></div>
-              </div>
-              <span class="hor-chart-desc text center">02/dez</span>
-            </div>
-            <div class="flex flex-col shrink-1">
-              <div class="chart-space">
-                <span class="absolute chart-value" style="top: 190px"
-                  >80,00</span
-                >
-                <div
-                  class="vert-chart-bar absolute bg-primary"
-                  style="height: 60px; top: 125px"
-                ></div>
-              </div>
-              <span class="hor-chart-desc text center">02/dez</span>
-            </div>
-            <div class="flex flex-col shrink-1">
-              <div class="chart-space">
-                <span class="absolute chart-value" style="top: 190px"
-                  >80,00</span
-                >
-                <div
-                  class="vert-chart-bar absolute bg-primary"
-                  style="height: 60px; top: 125px"
-                ></div>
-              </div>
-              <span class="hor-chart-desc text center">02/dez</span>
-            </div>
-            <div class="flex flex-col shrink-1">
-              <div class="chart-space">
-                <span class="absolute chart-value" style="top: 20px"
-                  >120,00</span
-                >
-                <div
-                  class="vert-chart-bar absolute bg-green"
-                  style="height: 80px; top: 45px"
-                ></div>
-              </div>
-              <span class="hor-chart-desc text center">05/dez</span>
-            </div>
-            <div class="flex flex-col shrink-1">
-              <div class="chart-space">
-                <span class="absolute chart-value" style="top: 20px"
-                  >120,00</span
-                >
-                <div
-                  class="vert-chart-bar absolute bg-green"
-                  style="height: 80px; top: 45px"
-                ></div>
-              </div>
-              <span class="hor-chart-desc text center">06/dez</span>
-            </div>
-            <div class="flex flex-col shrink-1">
-              <div class="chart-space">
-                <span class="absolute chart-value" style="top: 190px"
-                  >80,00</span
-                >
-                <div
-                  class="vert-chart-bar absolute bg-primary"
-                  style="height: 60px; top: 125px"
-                ></div>
-              </div>
-              <span class="hor-chart-desc text center">02/dez</span>
-            </div>
-            <div class="flex flex-col shrink-1">
-              <div class="chart-space">
-                <span class="absolute chart-value" style="top: 20px"
-                  >120,00</span
-                >
-                <div
-                  class="vert-chart-bar absolute bg-green"
-                  style="height: 80px; top: 45px"
-                ></div>
-              </div>
-              <span class="hor-chart-desc text center">08/dez</span>
-            </div>
-            <div class="flex flex-col shrink-1">
-              <div class="chart-space">
-                <span class="absolute chart-value" style="top: 190px"
-                  >80,00</span
-                >
-                <div
-                  class="vert-chart-bar absolute bg-primary"
-                  style="height: 60px; top: 125px"
-                ></div>
-              </div>
-              <span class="hor-chart-desc text center">09/dez</span>
-            </div>
-            <div class="flex flex-col shrink-1">
-              <div class="chart-space">
-                <span class="absolute chart-value" style="top: 190px"
-                  >80,00</span
-                >
-                <div
-                  class="vert-chart-bar absolute bg-primary"
-                  style="height: 60px; top: 125px"
-                ></div>
-              </div>
-              <span class="hor-chart-desc text center">10/dez</span>
-            </div>
+          <div class="chart-container">
+            <canvas id="day-charts" class="charts"></canvas>
           </div>
         </div>
       </div>
@@ -202,115 +77,8 @@
       <div class="card mt-24">
         <h2 class="card-title">Por categoria</h2>
         <div>
-          <canvas id="gp-Chart"></canvas>
-        </div>
-        <div class="overflow-x">
-          <div class="flex gap-8 relative chart-container">
-            <div class="flex flex-col">
-              <div class="flex flex-col shrink-1">
-                <div class="chart-space-positive">
-                  <span class="flex chart-value">80,00</span>
-                  <div
-                    class="vert-chart-bar bg-info"
-                    style="height: 60px; top: 125px"
-                  ></div>
-                </div>
-                <span class="hor-chart-desc text center mt-4">Mercado</span>
-              </div>
-            </div>
-
-            <div class="flex flex-col">
-              <div class="flex flex-col shrink-1">
-                <div class="chart-space-positive">
-                  <span class="flex chart-value">80,00</span>
-                  <div
-                    class="vert-chart-bar bg-info"
-                    style="height: 60px; top: 125px"
-                  ></div>
-                </div>
-                <span class="hor-chart-desc text center mt-4">Lazer</span>
-              </div>
-            </div>
-
-            <div class="flex flex-col">
-              <div class="flex flex-col shrink-1">
-                <div class="chart-space-positive">
-                  <span class="flex chart-value">80,00</span>
-                  <div
-                    class="vert-chart-bar bg-info"
-                    style="height: 60px; top: 125px"
-                  ></div>
-                </div>
-                <span class="hor-chart-desc text center mt-4">Saúde</span>
-              </div>
-            </div>
-
-            <div class="flex flex-col">
-              <div class="flex flex-col shrink-1">
-                <div class="chart-space-positive">
-                  <span class="flex chart-value">80,00</span>
-                  <div
-                    class="vert-chart-bar bg-info"
-                    style="height: 60px; top: 125px"
-                  ></div>
-                </div>
-                <span class="hor-chart-desc text center mt-4">Transporte</span>
-              </div>
-            </div>
-
-            <div class="flex flex-col">
-              <div class="flex flex-col shrink-1">
-                <div class="chart-space-positive">
-                  <span class="flex chart-value">80,00</span>
-                  <div
-                    class="vert-chart-bar bg-info"
-                    style="height: 60px; top: 125px"
-                  ></div>
-                </div>
-                <span class="hor-chart-desc text center mt-4">Educação</span>
-              </div>
-            </div>
-
-            <div class="flex flex-col">
-              <div class="flex flex-col shrink-1">
-                <div class="chart-space-positive">
-                  <span class="flex chart-value">80,00</span>
-                  <div
-                    class="vert-chart-bar bg-info"
-                    style="height: 60px; top: 125px"
-                  ></div>
-                </div>
-                <span class="hor-chart-desc text center mt-4">Casa</span>
-              </div>
-            </div>
-
-            <div class="flex flex-col">
-              <div class="flex flex-col shrink-1">
-                <div class="chart-space-positive">
-                  <span class="flex chart-value">80,00</span>
-                  <div
-                    class="vert-chart-bar bg-info"
-                    style="height: 60px; top: 125px"
-                  ></div>
-                </div>
-                <span class="hor-chart-desc text center mt-4"
-                  >Cuidados Pessoais</span
-                >
-              </div>
-            </div>
-
-            <div class="flex flex-col">
-              <div class="flex flex-col shrink-1">
-                <div class="chart-space-positive">
-                  <span class="flex chart-value">80,00</span>
-                  <div
-                    class="vert-chart-bar bg-info"
-                    style="height: 60px; top: 125px"
-                  ></div>
-                </div>
-                <span class="hor-chart-desc text center mt-4">Viagem</span>
-              </div>
-            </div>
+          <div class="chart-container">
+            <canvas id="categoria-Chart" class="charts"></canvas>
           </div>
         </div>
       </div>
