@@ -1,5 +1,6 @@
 * {
   box-sizing: border-box;
+  color: #343A40;
 }
 
 html, body {
@@ -10,6 +11,10 @@ html, body {
   width: 100vw;
   overflow-y: hidden;
   overflow-x: hidden;
+}
+
+i.fas {
+  color: white;
 }
 
 /* Estilo do corpo da pagina */
@@ -23,7 +28,9 @@ body {
 /* Estilos para o conteúdo principal */
 main {
   flex: 1;
+  max-width: 100%;
   padding: 20px;
+  overflow: hidden;
   background-color: #ffff;
   border-radius: 12px;
   filter: drop-shadow(rgba(0, 0, 0, 0.09) 1rem 1rem 4px);
@@ -50,6 +57,15 @@ aside {
   border-radius: 12px;
   display: flex;
   flex-direction: column;
+}
+
+#Sidebar a {
+  color: #fff;
+  text-decoration: none;
+}
+
+#Sidebar h3 {
+  color: #fff;
 }
 
 aside label {
@@ -172,5 +188,6 @@ input[type="text"], input[type="number"], input[type="date"], select {
 :root {
   --primary-color: #E91E63;
   --success-color: #4CAF50;
+  --secondary-color: #7B809A;
   --info-color: #03A9F4;
 }
